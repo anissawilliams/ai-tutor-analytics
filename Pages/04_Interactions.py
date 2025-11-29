@@ -5,6 +5,10 @@ from utils.storage import load_interactions
 
 st.title("💬 Lesson Interactions")
 df_interactions = load_interactions()
+if df_interactions.empty:
+    st.warning("No data available or quota exceeded.")
+else:
+    st.dataframe(df_interactions.head())
 #df_interactions = pd.DataFrame([doc.to_dict() for doc in db.collection("interactions").stream()])
 
 if not df_interactions.empty:

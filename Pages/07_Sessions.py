@@ -5,6 +5,10 @@ from utils.storage import load_sessions
 
 st.title("📂 Sessions")
 df_sessions = load_sessions()
+if df_sessions.empty:
+    st.warning("No data available or quota exceeded.")
+else:
+    st.dataframe(df_sessions.head())
 
 #df_sessions = pd.DataFrame([doc.to_dict() for doc in db.collection("sessions").stream()])
 

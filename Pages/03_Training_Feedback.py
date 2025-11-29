@@ -8,6 +8,11 @@ import matplotlib.pyplot as plt
 st.title("📝 AI Training Feedback")
 
 df_feedback = load_training_feedback()
+if df_feedback.empty:
+    st.warning("No data available or quota exceeded.")
+else:
+    st.dataframe(df_feedback.head())
+
 if not df_feedback.empty:
     df_feedback['timestamp'] = pd.to_datetime(df_feedback['timestamp'])
 
