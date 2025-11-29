@@ -3,3 +3,4 @@ pandas
 plotly
 wordcloud
 google-cloud-firestore
+firebase-admin
