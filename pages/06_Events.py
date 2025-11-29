@@ -9,8 +9,7 @@ df_events = load_events()
 #df_events = pd.DataFrame([doc.to_dict() for doc in db.collection("events").stream()])
 if df_events.empty:
     st.warning("No data available or quota exceeded.")
-else:
-    st.dataframe(df_events.head())
+
 if not df_events.empty:
     df_events['timestamp'] = pd.to_datetime(df_events['timestamp'])
 

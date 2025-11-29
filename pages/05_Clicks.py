@@ -8,8 +8,6 @@ st.title("🖱️ Clicks & UI Engagement")
 df_clicks = load_clicks()
 if df_clicks.empty:
     st.warning("No data available or quota exceeded.")
-else:
-    st.dataframe(df_clicks.head())
 #df_clicks = pd.DataFrame([doc.to_dict() for doc in db.collection("clicks").stream()])
 
 if not df_clicks.empty:

@@ -6,7 +6,8 @@ from utils.storage import load_learning_outcomes
 st.title("🧠 Learning Performance")
 
 df_outcomes = load_learning_outcomes()
-
+if df_outcomes.empty:
+    st.warning("No data available or quota exceeded.")
 
 #df_outcomes = pd.DataFrame([doc.to_dict() for doc in db.collection("learning_outcomes").stream()])
 

@@ -7,8 +7,7 @@ st.title("🔥 Engagement & Retention")
 df_users = load_users()
 if df_users.empty:
     st.warning("No data available or quota exceeded.")
-else:
-    st.dataframe(df_users.head())
+
 #df_users = pd.DataFrame([doc.to_dict() for doc in db.collection("users").stream()])
 
 if not df_users.empty:
