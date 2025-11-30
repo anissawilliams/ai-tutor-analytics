@@ -21,7 +21,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-
+      - name: Write secrets file
+        run: |
+          mkdir -p .streamlit
+          echo "${{ secrets.STREAMLIT_SECRETS }}" > .streamlit/secrets.toml
       - name: Run export script
         env:
           STREAMLIT_SECRETS: ${{ secrets.STREAMLIT_SECRETS }}
