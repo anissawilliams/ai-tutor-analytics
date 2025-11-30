@@ -27,7 +27,7 @@ jobs:
           STREAMLIT_SECRETS: ${{ secrets.STREAMLIT_SECRETS }}
         run: |
           echo "$STREAMLIT_SECRETS" > .streamlit/secrets.toml
-          python export_data.py
+          python utils/export_data.py
 
       - name: Commit artifacts
         run: |
