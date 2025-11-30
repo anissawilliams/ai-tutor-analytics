@@ -28,7 +28,10 @@ jobs:
         run: |
           echo "$STREAMLIT_SECRETS" > .streamlit/secrets.toml
           python utils/export_data.py
-
+      - name: Verify secrets file
+        run: |
+          ls -al .streamlit
+          head -n 5 .streamlit/secrets.toml
       - name: Commit artifacts
         run: |
           git config --global user.name "github-actions"
