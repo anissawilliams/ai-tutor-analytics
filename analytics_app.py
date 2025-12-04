@@ -36,7 +36,7 @@ colA, colB, colC = st.columns(3)
 with colA:
     st.caption("Student feedback and training insights.")
     st.page_link("pages/08_Survey_Responses.py", label="Survey Responses")
-    st.page_link("pages/02_Learning_Outcomes.py", label="Learning Outcomes")
+    st.page_link("pages/01_Learning_Outcomes.py", label="Learning Outcomes")
     st.page_link("pages/03_Training_Feedback.py", label="Training Feedback")
 
 with colB:
