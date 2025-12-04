@@ -10,7 +10,7 @@ df_users = load_collection("users")
 df_sessions = load_collection("sessions")
 df_clicks = load_collection("clicks")
 
-# Metrics row with safe checks
+# Metrics row with safety checks
 col1, col2, col3 = st.columns(3)
 
 if df_users.empty:
